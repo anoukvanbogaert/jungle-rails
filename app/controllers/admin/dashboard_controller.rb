@@ -5,5 +5,7 @@ class Admin::DashboardController < ApplicationController
                                if: -> { ENV["HTTP_BASIC_PASSWORD"].present? }
                                
   def show
+    @products = Product.all.order(created_at: :desc)
+    @categories = Category.all.order(created_at: :desc)
   end
 end

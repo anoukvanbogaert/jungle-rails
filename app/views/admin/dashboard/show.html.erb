@@ -1,2 +1,17 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<div class="panel panel-default products">
+
+    <table class="table table-bordered">
+
+        <tr>
+          <th colspan="2">Number of products in portfolio</th>
+          <td><a role="button" href="/admin/products" class="btn btn-success"><%= @products.count %></a></td>
+        </tr>
+
+        <tr>
+        <th colspan="2">Number of categories in portfolio</th>
+        <td><a role="button" href="/admin/products" class="btn btn-success"><%= @categories.count %></a></td>
+      </tr>
+
+    </table>
+
+  </div>
