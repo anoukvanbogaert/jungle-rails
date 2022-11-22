@@ -4,7 +4,7 @@ RSpec.describe Product, type: :model do
   describe 'Validations' do
     
     before do 
-     @category = Category.newa
+     @category = Category.new
      @product = Product.new(
        name: "Someone",
        price: 10,
