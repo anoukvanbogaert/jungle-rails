@@ -8,8 +8,7 @@ class User < ApplicationRecord
   before_save {email.downcase!}
 
   def self.authenticate_with_credentials(email, password)
-    email = email.strip
-    email = email.downcase
+    email = email.strip.downcase
     user = User.find_by_email(email)
     if user && user.authenticate(password)
       return user
